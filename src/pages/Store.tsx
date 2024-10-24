@@ -1,19 +1,20 @@
-import { Col, Row } from "react-bootstrap"
+// import { Col, Row } from "react-bootstrap"
 import { StoreItem } from "../components/StoreItem"
 import storeItems from "../data/items.json"
 
 export function Store() {
   return (
     <>
-      <h1>Store</h1>
-      <Row md={2} xs={1} lg={3} className="g-3">
+      <h1 className="p-6 font-semibold text-md uppercase underline">Store</h1>
+      <div className="p-8">
+        <div className="flex gap-8 flex-wrap justify-between ">
         {storeItems.map(item => (
-          <Col className="gap-2">
+          
             <StoreItem key={item.id} id={item.id} name={item.name} price={item.price} imgUrl={item.imgUrl} />
 
-          </Col>
-        ))}
-      </Row>
+        
+        ))}</div>
+      </div>
     </>
   )
 }

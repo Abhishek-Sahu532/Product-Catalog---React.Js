@@ -3,25 +3,25 @@
       "id": 1,
       "name": "Book",
       "price": 10.99,
-      "imgUrl": "/imgs/book.jpg"
+      "imgUrl": "https://images.pexels.com/photos/13650913/pexels-photo-13650913.jpeg"
     },
     {
       "id": 2,
       "name": "Computer",
       "price": 1199,
-      "imgUrl": "/imgs/computer.jpg"
+      "imgUrl": "https://images.pexels.com/photos/792199/pexels-photo-792199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": 3,
       "name": "Banana",
       "price": 1.05,
-      "imgUrl": "/imgs/banana.jpg"
+      "imgUrl": "https://images.pexels.com/photos/802783/pexels-photo-802783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": 4,
       "name": "Car",
       "price": 14000,
-      "imgUrl": "/imgs/car.jpg"
+      "imgUrl": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ]
   

@@ -1,4 +1,4 @@
-import { Offcanvas, Stack } from "react-bootstrap";
+// import { Offcanvas, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 import { CartItem } from "./CartItem";
@@ -9,8 +9,11 @@ type ShoppingCartProps = {
 };
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
-  
   return (
-    <div>Shopping Cart</div>
+    <>
+      {" "}
+      <div>Shopping Cart</div>
+      <CartItem  id={5} quantity={2}/>
+    </>
   );
 }
