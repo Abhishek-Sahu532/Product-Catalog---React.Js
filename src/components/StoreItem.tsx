@@ -10,6 +10,14 @@ type StoreItemProps = {
 };
 
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
+  const {
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+    getItemQuantity,
+  } = useShoppingCart();
+  const itemQuantity = getItemQuantity(id);
+  // console.log(itemQuantity)
   return (
     <div className="border border-1 border-red-400 w-96 h-96 rounded-md">
       <div>
@@ -25,21 +33,31 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
           </p>
         </div>
 
-        <button className="align-center text-xl text-green-600 font-bold">
-          {" "}
-          <span>+</span> Add To Cart
-        </button>
-        <div className="flex content-center align-middle gap-3 justify-center">
-          <button className="align-center text-xl text-green-600 font-bold">
+        {itemQuantity && itemQuantity ==  0 ? (
+          <>
+            <button
+              className="align-center text-xl text-green-600 font-bold"
+              onClick={() => {
+                increaseCartQuantity(id);
+              }}
+            >
+              {" "}
+              <span>+</span> Add To Cart
+            </button>
+          </>
+        ) : (
+          <><div className="flex content-center align-middle gap-3 justify-center">
+          <button className="align-center text-xl text-green-600 font-bold" onClick={()=>{increaseCartQuantity(id)}} >
             {" "}
             +
           </button>
-          <p>Total </p>
-          <button className="align-center text-xl text-green-600 font-bold">
+          <p>{itemQuantity} </p>
+          <button className="align-center text-xl text-green-600 font-bold" onClick={()=>{decreaseCartQuantity(id)}} >
             {" "}
             -
           </button>
-        </div>
+        </div> </>
+        )}
       </div>
     </div>
   );
